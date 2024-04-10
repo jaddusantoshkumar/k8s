@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gamutkart-d
+  labels:
+    env: prod
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      name: gamutkart-c
+  template:
+    metadata:
+      labels:
+        name: gamutkart-c
+    spec:
+      containers:
+      - name: gamutkart-c
+        image: jaddusantoshkumar/gamutkart:latest
+        ports:
+        - containerPort: 8080
