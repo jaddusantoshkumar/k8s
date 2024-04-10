@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: gamutkart-c
-        image: jaddusantoshkumar/gamutkart:latest
+        image: jaddusantoshkumar/gamutkart:18
         ports:
         - containerPort: 8080
